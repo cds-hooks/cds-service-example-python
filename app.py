@@ -45,9 +45,11 @@ def card(summary, indicator, source):
   }
 
 def link(label, url=None):
-  return {
-    'label': label, 'url': url
-  }
+  result = { 'label': label }
+  if url:
+    result['url'] = url
+
+  return result
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
