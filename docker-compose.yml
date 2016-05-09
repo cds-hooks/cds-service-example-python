@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: .
+    command: python app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
